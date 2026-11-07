@@ -10,7 +10,7 @@ Prototipo académico con un caso de estudio en el mercado mayorista Merca Panam�
 
 **Problema → Captura de datos → Visión artificial → Análisis → Decisión humana → Trazabilidad → Indicadores**
 
-**Demo en línea:** se publica en Render con el plan gratuito; ver [docs/despliegue-nube.md](docs/despliegue-nube.md).
+**Demo en línea: https://mercacircular-vision-ai.onrender.com** (Render, plan gratuito; ver [docs/despliegue-nube.md](docs/despliegue-nube.md)).
 Si el servicio estaba dormido, la primera carga tarda cerca de un minuto, y los datos vuelven al estado demostrativo al reiniciarse.
 
 ---

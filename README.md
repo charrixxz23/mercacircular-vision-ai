@@ -10,6 +10,9 @@ Prototipo académico con un caso de estudio en el mercado mayorista Merca Panam�
 
 **Problema → Captura de datos → Visión artificial → Análisis → Decisión humana → Trazabilidad → Indicadores**
 
+**Demo en línea:** se publica en Render con el plan gratuito; ver [docs/despliegue-nube.md](docs/despliegue-nube.md).
+Si el servicio estaba dormido, la primera carga tarda cerca de un minuto, y los datos vuelven al estado demostrativo al reiniciarse.
+
 ---
 
 ## Contenido
@@ -239,10 +242,13 @@ git remote add origin https://github.com/charrixxz23/mercacircular-vision-ai.git
 git push -u origin main
 ```
 
-**Despliegue posterior** (no realizado): el frontend puede ir a cualquier hosting de Node.js
-(`npm run build` con `BACKEND_URL` apuntando a la API) y el backend a un servicio que ejecute
-`uvicorn app.main:app` con un disco persistente para `database/` o con PostgreSQL. Antes de publicar
-con datos reales hacen falta autenticación, HTTPS y una política de retención de fotos.
+**Demo en la nube:** el repositorio incluye `Dockerfile`, `docker/start.sh` y `render.yaml` para
+desplegar API e interfaz en un solo contenedor en **Render** (plan gratuito): *New → Blueprint →*
+elegir el repositorio. Pasos, límites del plan gratuito y privacidad: [docs/despliegue-nube.md](docs/despliegue-nube.md).
+La integración continua (`.github/workflows/ci.yml`) ejecuta las pruebas y construye la imagen en cada push.
+
+Antes de usarlo con datos reales hacen falta autenticación, base de datos persistente (PostgreSQL)
+y una política de retención de fotos.
 
 ## 11. Trabajo futuro
 
@@ -264,6 +270,7 @@ con datos reales hacen falta autenticación, HTTPS y una política de retención
 | [docs/requisitos-y-casos-de-uso.md](docs/requisitos-y-casos-de-uso.md) | Requisitos funcionales/no funcionales y casos de uso |
 | [docs/pruebas.md](docs/pruebas.md) | Estrategia y resultados de pruebas |
 | [docs/guia-windows.md](docs/guia-windows.md) | Paso a paso en Windows y solución de problemas |
+| [docs/despliegue-nube.md](docs/despliegue-nube.md) | Demo pública en Render con Docker |
 
 **Licencias.** Código: **MIT**. Imágenes de ejemplo y pesos del modelo: derivados de Fruits-360
 (Mihai Oltean), **CC BY-SA 4.0**. Detalle de dependencias y atribuciones en [LICENSE](LICENSE) y

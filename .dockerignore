@@ -1,0 +1,14 @@
+**/node_modules
+**/.next
+**/.venv
+**/__pycache__
+**/.pytest_cache
+backend/ml/data
+backend/tests
+database/*.db*
+database/media
+docs
+.git
+.github
+.env
+*.log

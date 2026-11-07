@@ -1,0 +1,18 @@
+# Blueprint de Render: demo pública gratuita (plan free: 512 MB, se duerme tras 15 min sin visitas).
+# El disco es efímero: al reiniciar o despertar, la demo vuelve a los datos demostrativos.
+services:
+  - type: web
+    name: mercacircular-vision-ai
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: SEED_DEMO_DATA
+        value: "true"
+      - key: ALLOW_DEMO_RESET
+        value: "true"
+      - key: MAX_UPLOAD_MB
+        value: "8"

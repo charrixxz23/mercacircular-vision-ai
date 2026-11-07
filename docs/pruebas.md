@@ -60,13 +60,22 @@ Además, desde el ZIP extraído en una carpeta nueva: instalación con `scripts/
 **persistencia verificada reiniciando el backend** (el lote creado y su inspección seguían ahí; los datos
 demostrativos no se duplicaron).
 
-## 3. Validación del modelo
+## 3. Contenedor para la nube
+
+La imagen Docker no se pudo construir en el entorno de desarrollo (sin acceso a Docker Hub). Se verificó
+lo equivalente: el frontend compilado en modo *standalone* y el backend se colocaron con la misma
+estructura de carpetas del `Dockerfile` y se arrancaron con el mismo `docker/start.sh`. Resultado: API
+y web en un solo puerto, las 8 páginas cargan sin errores de consola, el análisis IA funciona desde la
+interfaz y el consumo total fue ≈ 250 MB (uvicorn ≈ 144 MB, Next.js ≈ 106 MB). La construcción real de
+la imagen se verifica en GitHub Actions (job *Imagen Docker*) en cada push.
+
+## 4. Validación del modelo
 
 Ver [`dataset-y-validacion.md`](dataset-y-validacion.md): partición por grupos, validación cruzada
 *leave-one-group-out*, evaluación única en prueba, matriz de confusión, sensibilidad y falsos positivos
 por clase, calibración, y validación sintética del detector de manchas.
 
-## 4. Lo que NO se ejecutó
+## 5. Lo que NO se ejecutó
 
 | Elemento | Motivo | Cómo verificarlo |
 |---|---|---|

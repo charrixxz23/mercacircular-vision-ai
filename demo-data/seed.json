@@ -1,0 +1,2875 @@
+{
+ "_aviso": "DATOS SINTÉTICOS DEMOSTRATIVOS generados por scripts/generate_demo_seed.py (semilla fija). Comerciantes, personas y lotes son ficticios. No representan operaciones reales de Merca Panamá.",
+ "products": [
+  {
+   "code": "tomate",
+   "name": "Tomate",
+   "color": "#dc2626",
+   "model_label": "tomate"
+  },
+  {
+   "code": "banano",
+   "name": "Banano",
+   "color": "#ca8a04",
+   "model_label": "banano"
+  },
+  {
+   "code": "papa",
+   "name": "Papa",
+   "color": "#92400e",
+   "model_label": "papa"
+  }
+ ],
+ "merchants": [
+  "Agro Demo Los Valles",
+  "Distribuidora Demo Altamira",
+  "Comercial Demo El Higo",
+  "Frutas Demo del Atlántico",
+  "Hortalizas Demo Tierras Altas",
+  "Mayorista Demo La Llanura"
+ ],
+ "areas": [
+  "Nave 1 · Frutas",
+  "Nave 2 · Hortalizas",
+  "Nave 3 · Tubérculos y raíces",
+  "Andén de recepción",
+  "Cámara de frío"
+ ],
+ "people": {
+  "recepcion": {
+   "name": "R. Gómez (ficticio)",
+   "role": "Operador(a) de recepción"
+  },
+  "inspector": {
+   "name": "A. Ríos (ficticia)",
+   "role": "Inspector(a) de calidad"
+  },
+  "inocuidad": {
+   "name": "L. Méndez (ficticia)",
+   "role": "Responsable de inocuidad"
+  },
+  "comercial": {
+   "name": "C. Pérez (ficticio)",
+   "role": "Coordinador(a) comercial"
+  },
+  "supervisor": {
+   "name": "J. Castillo (ficticio)",
+   "role": "Supervisor(a) de nave"
+  }
+ },
+ "lots": [
+  {
+   "code": "MC-D-0001",
+   "product": "papa",
+   "merchant": 3,
+   "area": 2,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 35,
+   "unit": "sacos",
+   "weight_kg": 775,
+   "observations": null,
+   "day_offset": 84,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.43,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 10.3,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 15.0,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 26.06,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 772
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0002",
+   "product": "banano",
+   "merchant": 3,
+   "area": 3,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 26,
+   "unit": "cajas",
+   "weight_kg": 655,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 83,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 15.61,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 16.42,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 26.16,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 28.63,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 632
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0003",
+   "product": "tomate",
+   "merchant": 0,
+   "area": 4,
+   "origin": "Los Santos",
+   "quantity": 31,
+   "unit": "cajas",
+   "weight_kg": 560,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 82,
+   "hour": 8,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.09,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 12.01,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 15.22,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 534
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0004",
+   "product": "papa",
+   "merchant": 1,
+   "area": 2,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 64,
+   "unit": "sacos",
+   "weight_kg": 1150,
+   "observations": null,
+   "day_offset": 78,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 6.54,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 7.4,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 16.33,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 1050
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0005",
+   "product": "banano",
+   "merchant": 0,
+   "area": 3,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 35,
+   "unit": "cajas",
+   "weight_kg": 635,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 76,
+   "hour": 12,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.46,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.62,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 28.4,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 544
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0006",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 1,
+   "origin": "Los Santos",
+   "quantity": 17,
+   "unit": "cajas",
+   "weight_kg": 430,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 76,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.61,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 9.19,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 14.82,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 360
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0007",
+   "product": "tomate",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 4,
+   "unit": "cajas",
+   "weight_kg": 95,
+   "observations": null,
+   "day_offset": 75,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 9.0,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 9.44,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 27.27,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 30.24,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 75
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0008",
+   "product": "banano",
+   "merchant": 0,
+   "area": 3,
+   "origin": "Bocas del Toro",
+   "quantity": 25,
+   "unit": "cajas",
+   "weight_kg": 445,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 73,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.28,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 13.9,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 29.32,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 406
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0009",
+   "product": "banano",
+   "merchant": 5,
+   "area": 3,
+   "origin": "Bocas del Toro",
+   "quantity": 8,
+   "unit": "cajas",
+   "weight_kg": 195,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 73,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.67,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 15.6,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 24.94,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 28.93,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 188
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0010",
+   "product": "papa",
+   "merchant": 5,
+   "area": 2,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 28,
+   "unit": "sacos",
+   "weight_kg": 625,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 71,
+   "hour": 6,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.67,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 9.82,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 11.99,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 19.48,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 448
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0011",
+   "product": "papa",
+   "merchant": 2,
+   "area": 3,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 19,
+   "unit": "sacos",
+   "weight_kg": 350,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 70,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.39,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.44,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 18.92,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 22.3,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 297
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0012",
+   "product": "banano",
+   "merchant": 2,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 25,
+   "unit": "cajas",
+   "weight_kg": 635,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 70,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.72,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 11.76,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 25.93,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 620
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0013",
+   "product": "banano",
+   "merchant": 4,
+   "area": 0,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 20,
+   "unit": "cajas",
+   "weight_kg": 500,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 69,
+   "hour": 12,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.69,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 16.15,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 23.32,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 436
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0014",
+   "product": "banano",
+   "merchant": 4,
+   "area": 0,
+   "origin": "Panamá Oeste",
+   "quantity": 11,
+   "unit": "cajas",
+   "weight_kg": 265,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 67,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 5.93,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 7.65,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 16.52,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 262
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0015",
+   "product": "tomate",
+   "merchant": 3,
+   "area": 1,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 14,
+   "unit": "cajas",
+   "weight_kg": 275,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 67,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.22,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 13.65,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 17.99,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 21.12,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 197
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0016",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 1,
+   "origin": "Herrera (Chitré)",
+   "quantity": 6,
+   "unit": "cajas",
+   "weight_kg": 160,
+   "observations": null,
+   "day_offset": 65,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.86,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 16.65,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 22.54,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 159
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0017",
+   "product": "banano",
+   "merchant": 0,
+   "area": 3,
+   "origin": "Panamá Oeste",
+   "quantity": 18,
+   "unit": "cajas",
+   "weight_kg": 320,
+   "observations": null,
+   "day_offset": 65,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.23,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 12.19,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 15.19,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 290
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0018",
+   "product": "tomate",
+   "merchant": 3,
+   "area": 3,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 13,
+   "unit": "cajas",
+   "weight_kg": 285,
+   "observations": null,
+   "day_offset": 64,
+   "hour": 14,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 15.11,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.68,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 20.06,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 249
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0019",
+   "product": "tomate",
+   "merchant": 1,
+   "area": 1,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 27,
+   "unit": "cajas",
+   "weight_kg": 590,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 64,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.21,
+     "scenario": "imagen_insuficiente"
+    },
+    {
+     "type": "decision",
+     "h": 11.8,
+     "action": "solicitar_nueva_imagen",
+     "who": "inspector"
+    },
+    {
+     "type": "inspeccion",
+     "h": 12.14,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 13.59,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 22.66,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 567
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0020",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 3,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 15,
+   "unit": "cajas",
+   "weight_kg": 320,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 63,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.46,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.07,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 23.38,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 281
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0021",
+   "product": "papa",
+   "merchant": 5,
+   "area": 3,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 25,
+   "unit": "sacos",
+   "weight_kg": 635,
+   "observations": null,
+   "day_offset": 62,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.83,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 12.59,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 32.52,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 42.48,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 509
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0022",
+   "product": "banano",
+   "merchant": 5,
+   "area": 3,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 9,
+   "unit": "cajas",
+   "weight_kg": 235,
+   "observations": null,
+   "day_offset": 61,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.02,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.38,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 19.64,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 200
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0023",
+   "product": "banano",
+   "merchant": 2,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 13,
+   "unit": "cajas",
+   "weight_kg": 240,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 60,
+   "hour": 14,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 15.41,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 15.87,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 23.63,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 173
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0024",
+   "product": "papa",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 19,
+   "unit": "sacos",
+   "weight_kg": 345,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 59,
+   "hour": 8,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.75,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 10.62,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 29.11,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 302
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0025",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 4,
+   "origin": "Los Santos",
+   "quantity": 26,
+   "unit": "cajas",
+   "weight_kg": 570,
+   "observations": null,
+   "day_offset": 58,
+   "hour": 12,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.13,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.52,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 25.3,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 513
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0026",
+   "product": "papa",
+   "merchant": 5,
+   "area": 2,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 20,
+   "unit": "sacos",
+   "weight_kg": 410,
+   "observations": null,
+   "day_offset": 54,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.73,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.46,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 25.82,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 395
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0027",
+   "product": "tomate",
+   "merchant": 1,
+   "area": 1,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 9,
+   "unit": "cajas",
+   "weight_kg": 190,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 53,
+   "hour": 12,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.18,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 14.26,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 23.81,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 180
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0028",
+   "product": "tomate",
+   "merchant": 1,
+   "area": 4,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 28,
+   "unit": "cajas",
+   "weight_kg": 500,
+   "observations": null,
+   "day_offset": 53,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.99,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.06,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 30.92,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 38.67,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 444
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0029",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 1,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 18,
+   "unit": "cajas",
+   "weight_kg": 440,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 52,
+   "hour": 14,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.5,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 15.79,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 22.89,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 439
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0030",
+   "product": "papa",
+   "merchant": 0,
+   "area": 2,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 14,
+   "unit": "sacos",
+   "weight_kg": 255,
+   "observations": null,
+   "day_offset": 52,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.83,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 11.85,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 15.01,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 24.3,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 199
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0031",
+   "product": "papa",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 31,
+   "unit": "sacos",
+   "weight_kg": 620,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 51,
+   "hour": 14,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 15.27,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.61,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 28.0,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 559
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0032",
+   "product": "papa",
+   "merchant": 4,
+   "area": 2,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 27,
+   "unit": "sacos",
+   "weight_kg": 585,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 49,
+   "hour": 8,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.77,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 10.06,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 12.97,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 509
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0033",
+   "product": "banano",
+   "merchant": 0,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 40,
+   "unit": "cajas",
+   "weight_kg": 885,
+   "observations": null,
+   "day_offset": 48,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.59,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 13.0,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 18.39,
+     "action": "confirmar_donacion",
+     "who": "inspector",
+     "kg": 514
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0034",
+   "product": "papa",
+   "merchant": 0,
+   "area": 2,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 28,
+   "unit": "sacos",
+   "weight_kg": 705,
+   "observations": null,
+   "day_offset": 47,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 6.69,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 7.24,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 29.23,
+     "action": "confirmar_donacion",
+     "who": "inspector",
+     "kg": 503
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0035",
+   "product": "tomate",
+   "merchant": 0,
+   "area": 4,
+   "origin": "Los Santos",
+   "quantity": 20,
+   "unit": "cajas",
+   "weight_kg": 510,
+   "observations": null,
+   "day_offset": 46,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.84,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 13.7,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 28.92,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 460
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0036",
+   "product": "banano",
+   "merchant": 3,
+   "area": 0,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 30,
+   "unit": "cajas",
+   "weight_kg": 750,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 45,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 9.48,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 10.76,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 20.24,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 610
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0037",
+   "product": "banano",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Bocas del Toro",
+   "quantity": 12,
+   "unit": "cajas",
+   "weight_kg": 310,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 44,
+   "hour": 8,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.5,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 10.39,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 22.45,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 25.39,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 297
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0038",
+   "product": "banano",
+   "merchant": 5,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 20,
+   "unit": "cajas",
+   "weight_kg": 365,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 43,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.76,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 13.49,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 30.32,
+     "action": "confirmar_donacion",
+     "who": "inspector",
+     "kg": 239
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0039",
+   "product": "banano",
+   "merchant": 2,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 16,
+   "unit": "cajas",
+   "weight_kg": 395,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 42,
+   "hour": 12,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.5,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 15.14,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 24.64,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 363
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0040",
+   "product": "tomate",
+   "merchant": 0,
+   "area": 3,
+   "origin": "Herrera (Chitré)",
+   "quantity": 7,
+   "unit": "cajas",
+   "weight_kg": 150,
+   "observations": null,
+   "day_offset": 41,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.92,
+     "scenario": "imagen_insuficiente"
+    },
+    {
+     "type": "decision",
+     "h": 11.29,
+     "action": "solicitar_nueva_imagen",
+     "who": "inspector"
+    },
+    {
+     "type": "inspeccion",
+     "h": 12.07,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 12.72,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 28.95,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 138
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0041",
+   "product": "papa",
+   "merchant": 5,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 47,
+   "unit": "sacos",
+   "weight_kg": 1165,
+   "observations": null,
+   "day_offset": 40,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 13.63,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.87,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 29.25,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 1098
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0042",
+   "product": "tomate",
+   "merchant": 1,
+   "area": 1,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 14,
+   "unit": "cajas",
+   "weight_kg": 275,
+   "observations": null,
+   "day_offset": 37,
+   "hour": 6,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.64,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 8.16,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 10.61,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 274
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0043",
+   "product": "tomate",
+   "merchant": 5,
+   "area": 1,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 5,
+   "unit": "cajas",
+   "weight_kg": null,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 36,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "peso",
+     "h": 8.73,
+     "kg": 355
+    },
+    {
+     "type": "inspeccion",
+     "h": 9.03,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 10.01,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 27.23,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 264
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0044",
+   "product": "banano",
+   "merchant": 0,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 25,
+   "unit": "cajas",
+   "weight_kg": 455,
+   "observations": null,
+   "day_offset": 35,
+   "hour": 6,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.98,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 9.34,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 30.82,
+     "action": "confirmar_donacion",
+     "who": "inspector",
+     "kg": 328
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0045",
+   "product": "papa",
+   "merchant": 4,
+   "area": 2,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 35,
+   "unit": "sacos",
+   "weight_kg": 865,
+   "observations": null,
+   "day_offset": 35,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.28,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 12.63,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 29.4,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 823
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0046",
+   "product": "papa",
+   "merchant": 5,
+   "area": 3,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 22,
+   "unit": "sacos",
+   "weight_kg": 495,
+   "observations": null,
+   "day_offset": 34,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 9.85,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 11.46,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 32.15,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 41.14,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 466
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0047",
+   "product": "papa",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 14,
+   "unit": "sacos",
+   "weight_kg": 350,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 33,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.1,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 7.99,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 26.13,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 34.01,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 329
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0048",
+   "product": "papa",
+   "merchant": 1,
+   "area": 2,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 50,
+   "unit": "sacos",
+   "weight_kg": null,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 33,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "peso",
+     "h": 15.44,
+     "kg": 635
+    },
+    {
+     "type": "inspeccion",
+     "h": 15.74,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 17.15,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 23.67,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 606
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0049",
+   "product": "papa",
+   "merchant": 1,
+   "area": 3,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 42,
+   "unit": "sacos",
+   "weight_kg": 840,
+   "observations": null,
+   "day_offset": 32,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.83,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 13.67,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 16.39,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 649
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0050",
+   "product": "tomate",
+   "merchant": 3,
+   "area": 4,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 15,
+   "unit": "cajas",
+   "weight_kg": 335,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 31,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.64,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 9.48,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 25.24,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 296
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0051",
+   "product": "tomate",
+   "merchant": 3,
+   "area": 4,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 32,
+   "unit": "cajas",
+   "weight_kg": 570,
+   "observations": null,
+   "day_offset": 31,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.71,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.16,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 29.05,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 562
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0052",
+   "product": "tomate",
+   "merchant": 5,
+   "area": 1,
+   "origin": "Los Santos",
+   "quantity": 8,
+   "unit": "cajas",
+   "weight_kg": 165,
+   "observations": null,
+   "day_offset": 30,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.76,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 11.77,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 15.44,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 19.38,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 158
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0053",
+   "product": "tomate",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 15,
+   "unit": "cajas",
+   "weight_kg": 380,
+   "observations": null,
+   "day_offset": 30,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.45,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 9.87,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 13.49,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 20.5,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 347
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0054",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 3,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 13,
+   "unit": "cajas",
+   "weight_kg": 330,
+   "observations": null,
+   "day_offset": 28,
+   "hour": 8,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 9.71,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 10.64,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 26.03,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 32.43,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 281
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0055",
+   "product": "banano",
+   "merchant": 1,
+   "area": 3,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 17,
+   "unit": "cajas",
+   "weight_kg": 300,
+   "observations": null,
+   "day_offset": 28,
+   "hour": 6,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.0,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 7.36,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 13.63,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 25.3,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 288
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0056",
+   "product": "tomate",
+   "merchant": 4,
+   "area": 1,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 33,
+   "unit": "cajas",
+   "weight_kg": 590,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 27,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.94,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.73,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 20.41,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 588
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0057",
+   "product": "banano",
+   "merchant": 5,
+   "area": 0,
+   "origin": "Panamá Oeste",
+   "quantity": 22,
+   "unit": "cajas",
+   "weight_kg": 550,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 26,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.85,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 8.29,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 15.28,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 351
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0058",
+   "product": "papa",
+   "merchant": 2,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 29,
+   "unit": "sacos",
+   "weight_kg": 730,
+   "observations": null,
+   "day_offset": 25,
+   "hour": 14,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 15.63,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 16.07,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 27.2,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 729
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0059",
+   "product": "papa",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 59,
+   "unit": "sacos",
+   "weight_kg": 1185,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 25,
+   "hour": 6,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.51,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 9.37,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 12.21,
+     "action": "confirmar_donacion",
+     "who": "inspector",
+     "kg": 924
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0060",
+   "product": "papa",
+   "merchant": 0,
+   "area": 2,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 56,
+   "unit": "sacos",
+   "weight_kg": 1000,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 22,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.48,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.58,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 30.98,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 882
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0061",
+   "product": "tomate",
+   "merchant": 5,
+   "area": 1,
+   "origin": "Los Santos",
+   "quantity": 12,
+   "unit": "cajas",
+   "weight_kg": 255,
+   "observations": null,
+   "day_offset": 21,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.46,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 12.05,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 25.45,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 238
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0062",
+   "product": "tomate",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 14,
+   "unit": "cajas",
+   "weight_kg": 255,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 20,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.64,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 8.63,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 16.54,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 248
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0063",
+   "product": "banano",
+   "merchant": 1,
+   "area": 0,
+   "origin": "Panamá Oeste",
+   "quantity": 32,
+   "unit": "cajas",
+   "weight_kg": 585,
+   "observations": null,
+   "day_offset": 19,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.84,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 13.81,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 16.42,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 465
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0064",
+   "product": "tomate",
+   "merchant": 2,
+   "area": 1,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 20,
+   "unit": "cajas",
+   "weight_kg": 440,
+   "observations": null,
+   "day_offset": 18,
+   "hour": 5,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 6.08,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 7.99,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 14.51,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 20.45,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 403
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0065",
+   "product": "papa",
+   "merchant": 3,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 40,
+   "unit": "sacos",
+   "weight_kg": 885,
+   "observations": null,
+   "day_offset": 18,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.77,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 9.2,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 13.8,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 583
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0066",
+   "product": "banano",
+   "merchant": 1,
+   "area": 0,
+   "origin": "Bocas del Toro",
+   "quantity": 22,
+   "unit": "cajas",
+   "weight_kg": 395,
+   "observations": null,
+   "day_offset": 17,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.67,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 8.81,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 21.76,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 263
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0067",
+   "product": "banano",
+   "merchant": 3,
+   "area": 3,
+   "origin": "Chiriquí (Barú)",
+   "quantity": 21,
+   "unit": "cajas",
+   "weight_kg": null,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 16,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "peso",
+     "h": 10.33,
+     "kg": 615
+    },
+    {
+     "type": "inspeccion",
+     "h": 10.63,
+     "scenario": "imagen_insuficiente"
+    },
+    {
+     "type": "decision",
+     "h": 12.36,
+     "action": "solicitar_nueva_imagen",
+     "who": "inspector"
+    },
+    {
+     "type": "inspeccion",
+     "h": 13.48,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 14.15,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 22.87,
+     "action": "enviar_evaluacion_donacion",
+     "who": "comercial"
+    },
+    {
+     "type": "decision",
+     "h": 30.79,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 502
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0068",
+   "product": "banano",
+   "merchant": 0,
+   "area": 3,
+   "origin": "Bocas del Toro",
+   "quantity": 32,
+   "unit": "cajas",
+   "weight_kg": 650,
+   "observations": null,
+   "day_offset": 15,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 11.33,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 13.3,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 36.94,
+     "action": "confirmar_donacion",
+     "who": "inocuidad",
+     "kg": 387
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0069",
+   "product": "papa",
+   "merchant": 1,
+   "area": 2,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 30,
+   "unit": "sacos",
+   "weight_kg": 590,
+   "observations": "Excedente del día anterior.",
+   "day_offset": 14,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.21,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 13.51,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 25.46,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 589
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0070",
+   "product": "banano",
+   "merchant": 4,
+   "area": 3,
+   "origin": "Panamá Oeste",
+   "quantity": 23,
+   "unit": "cajas",
+   "weight_kg": 565,
+   "observations": null,
+   "day_offset": 13,
+   "hour": 13,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 15.51,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 16.8,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 28.09,
+     "action": "enviar_gestion_residuos",
+     "who": "inocuidad",
+     "notes": "No apto tras evaluación presencial."
+    },
+    {
+     "type": "decision",
+     "h": 38.92,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 534
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0071",
+   "product": "papa",
+   "merchant": 5,
+   "area": 3,
+   "origin": "Chiriquí (Volcán)",
+   "quantity": 32,
+   "unit": "sacos",
+   "weight_kg": 700,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 11,
+   "hour": 10,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.57,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 13.22,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 31.85,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 620
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0072",
+   "product": "tomate",
+   "merchant": 1,
+   "area": 4,
+   "origin": "Los Santos",
+   "quantity": 20,
+   "unit": "cajas",
+   "weight_kg": 510,
+   "observations": "Sin comprador al cierre.",
+   "day_offset": 10,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.23,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 13.47,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 18.0,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 448
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0073",
+   "product": "tomate",
+   "merchant": 5,
+   "area": 1,
+   "origin": "Los Santos",
+   "quantity": 26,
+   "unit": "cajas",
+   "weight_kg": 570,
+   "observations": null,
+   "day_offset": 9,
+   "hour": 14,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 14.55,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 15.29,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 21.93,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 530
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0074",
+   "product": "banano",
+   "merchant": 1,
+   "area": 0,
+   "origin": "Panamá Oeste",
+   "quantity": 10,
+   "unit": "cajas",
+   "weight_kg": 250,
+   "observations": null,
+   "day_offset": 8,
+   "hour": 6,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 8.73,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 9.57,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 14.64,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 242
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0075",
+   "product": "banano",
+   "merchant": 2,
+   "area": 3,
+   "origin": "Bocas del Toro",
+   "quantity": 24,
+   "unit": "cajas",
+   "weight_kg": null,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 7,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "peso",
+     "h": 11.71,
+     "kg": 575
+    },
+    {
+     "type": "inspeccion",
+     "h": 12.01,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 13.93,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 19.89,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 558
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0076",
+   "product": "banano",
+   "merchant": 0,
+   "area": 3,
+   "origin": "Panamá Oeste",
+   "quantity": 47,
+   "unit": "cajas",
+   "weight_kg": 850,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 5,
+   "hour": 9,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 10.42,
+     "scenario": "deterioro_extenso"
+    },
+    {
+     "type": "decision",
+     "h": 10.94,
+     "action": "enviar_gestion_residuos",
+     "who": "inspector"
+    },
+    {
+     "type": "decision",
+     "h": 13.42,
+     "action": "confirmar_residuos",
+     "who": "supervisor",
+     "kg": 779
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0077",
+   "product": "tomate",
+   "merchant": 3,
+   "area": 3,
+   "origin": "Coclé (Penonomé)",
+   "quantity": 9,
+   "unit": "cajas",
+   "weight_kg": null,
+   "observations": null,
+   "day_offset": 3,
+   "hour": 11,
+   "steps": [
+    {
+     "type": "peso",
+     "h": 11.9,
+     "kg": 100
+    },
+    {
+     "type": "inspeccion",
+     "h": 12.2,
+     "scenario": "manchas_leves"
+    },
+    {
+     "type": "decision",
+     "h": 12.79,
+     "action": "enviar_evaluacion_donacion",
+     "who": "inspector"
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0078",
+   "product": "tomate",
+   "merchant": 5,
+   "area": 1,
+   "origin": "Chiriquí (Boquete)",
+   "quantity": 24,
+   "unit": "cajas",
+   "weight_kg": 525,
+   "observations": null,
+   "day_offset": 1,
+   "hour": 7,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 7.94,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 9.09,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 19.21,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 462
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0079",
+   "product": "papa",
+   "merchant": 2,
+   "area": 3,
+   "origin": "Chiriquí (Cerro Punta)",
+   "quantity": 19,
+   "unit": "sacos",
+   "weight_kg": 415,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 0,
+   "hour": 12,
+   "steps": [
+    {
+     "type": "inspeccion",
+     "h": 12.89,
+     "scenario": "imagen_insuficiente"
+    },
+    {
+     "type": "decision",
+     "h": 13.92,
+     "action": "solicitar_nueva_imagen",
+     "who": "inspector"
+    },
+    {
+     "type": "inspeccion",
+     "h": 14.92,
+     "scenario": "sin_anomalias"
+    },
+    {
+     "type": "decision",
+     "h": 15.34,
+     "action": "enviar_revision_comercial",
+     "who": "supervisor"
+    },
+    {
+     "type": "decision",
+     "h": 24.27,
+     "action": "confirmar_comercializacion",
+     "who": "comercial",
+     "kg": 394
+    }
+   ]
+  },
+  {
+   "code": "MC-D-0080",
+   "product": "tomate",
+   "merchant": 1,
+   "area": 3,
+   "origin": "Los Santos",
+   "quantity": 16,
+   "unit": "cajas",
+   "weight_kg": 320,
+   "observations": "Cajas con golpes en el transporte.",
+   "day_offset": 0,
+   "hour": 8,
+   "steps": []
+  }
+ ]
+}

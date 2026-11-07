@@ -1,0 +1,3 @@
+# Solo para reentrenar el modelo (no se necesita para ejecutar la demo).
+-r requirements.txt
+scikit-learn>=1.5,<2.0

@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Paleta MercaCircular (canales RGB para poder usar opacidad en Tailwind).
+ * Verde profundo, verde agrícola, blanco cálido, gris neutro y naranja suave.
+ * Los contrastes de texto cumplen WCAG AA en ambos temas.
+ */
+:root {
+  --canvas: 247 246 241;    /* blanco cálido */
+  --surface: 255 255 255;
+  --sunken: 239 238 232;
+  --ink: 22 33 28;          /* texto principal */
+  --muted: 92 99 94;        /* gris neutro (AA sobre blanco y canvas) */
+  --line: 222 221 213;
+  --deep: 18 55 42;         /* verde profundo: barra lateral, títulos */
+  --field: 62 117 36;       /* verde agrícola: botones (AA con texto blanco) */
+  --field-ink: 46 96 25;    /* verde para texto sobre fondo claro */
+  --leaf: 223 238 214;      /* verde claro de apoyo */
+  --warn: 224 137 59;       /* naranja suave */
+  --warn-bg: 252 237 220;
+  --warn-ink: 138 72 14;
+  --crit: 180 35 24;
+  --crit-bg: 253 232 229;
+  --info: 37 94 140;
+  --info-bg: 225 238 248;
+  --tag: 244 228 193;       /* cartón del marbete */
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: 14 22 19;
+  --surface: 21 32 28;
+  --sunken: 28 41 36;
+  --ink: 230 236 232;
+  --muted: 158 170 163;
+  --line: 45 60 54;
+  --deep: 10 30 23;
+  --field: 104 163 70;
+  --field-ink: 150 205 116;
+  --leaf: 33 56 38;
+  --warn: 230 150 80;
+  --warn-bg: 62 40 18;
+  --warn-ink: 246 190 130;
+  --crit: 240 110 95;
+  --crit-bg: 70 26 22;
+  --info: 120 175 225;
+  --info-bg: 22 44 64;
+  --tag: 92 78 52;
+  color-scheme: dark;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  @apply bg-canvas text-ink font-sans antialiased;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+h1, h2, h3 { @apply font-display text-deep dark:text-ink; letter-spacing: -0.01em; }
+
+:focus-visible { outline: 3px solid rgb(var(--field)); outline-offset: 2px; border-radius: 4px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+@layer components {
+  .panel { @apply rounded-xl border border-line bg-surface; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; min-height: 40px; }
+  .btn-primary { @apply btn bg-field text-white hover:bg-field/90; }
+  .btn-secondary { @apply btn border border-line bg-surface text-ink hover:bg-sunken; }
+  .btn-ghost { @apply btn text-ink hover:bg-sunken; }
+  .btn-danger { @apply btn bg-crit text-white hover:bg-crit/90; }
+  .input { @apply w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink placeholder:text-muted/80 focus:border-field focus:outline-none; min-height: 40px; }
+  .label { @apply mb-1 block text-sm font-medium text-ink; }
+  .hint { @apply mt-1 text-xs text-muted; }
+  .table-head { @apply border-b border-line bg-sunken/60 text-left text-xs font-semibold text-muted; }
+}
+
+/* Recorrido guiado: elemento resaltado */
+.tour-highlight {
+  position: relative;
+  z-index: 40;
+  box-shadow: 0 0 0 3px rgb(var(--warn)), 0 0 0 9999px rgb(10 25 20 / 0.35);
+  border-radius: 12px;
+}
+
+/* Impresión de la etiqueta del lote */
+@media print {
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area { position: absolute; left: 0; top: 0; }
+}

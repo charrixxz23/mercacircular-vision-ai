@@ -1,0 +1,34 @@
+{
+  "_aviso": "Escenarios del MODO DEMOSTRATIVO. Sus resultados están escritos de antemano para mostrar el flujo de trabajo; no los genera ningún modelo y no describen la imagen que se cargue. Nunca incluyen regiones dibujadas ni probabilidades.",
+  "escenarios": [
+    {
+      "id": "sin_anomalias",
+      "titulo": "Producto sin indicios visibles",
+      "descripcion": "El inspector no reporta manchas ni golpes en la muestra fotografiada.",
+      "calidad": "buena",
+      "anomalias": { "cantidad": 0, "porcentaje": 0.0, "descripcion": "Escenario: sin manchas visibles en la muestra." }
+    },
+    {
+      "id": "manchas_leves",
+      "titulo": "Manchas leves en algunas piezas",
+      "descripcion": "Algunas piezas presentan manchas oscuras pequeñas en la superficie.",
+      "calidad": "buena",
+      "anomalias": { "cantidad": 2, "porcentaje": 6.0, "descripcion": "Escenario: dos manchas oscuras pequeñas (≈ 6 % de la superficie visible)." }
+    },
+    {
+      "id": "deterioro_extenso",
+      "titulo": "Deterioro extenso",
+      "descripcion": "Gran parte de la muestra presenta zonas oscuras y blandas.",
+      "calidad": "buena",
+      "anomalias": { "cantidad": 5, "porcentaje": 32.0, "descripcion": "Escenario: zonas oscuras extensas (≈ 32 % de la superficie visible)." }
+    },
+    {
+      "id": "imagen_insuficiente",
+      "titulo": "Imagen desenfocada",
+      "descripcion": "La fotografía del escenario está movida y no permite evaluar la superficie.",
+      "calidad": "insuficiente",
+      "mensaje_calidad": "La foto del escenario está desenfocada.",
+      "anomalias": { "cantidad": 0, "porcentaje": null, "descripcion": "Escenario: no se puede evaluar la superficie por la calidad de la foto." }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "_aviso": "Imágenes derivadas de Fruits-360 (Mihai Oltean, CC BY-SA 4.0, https://github.com/fruits-360). Se distribuyen bajo la misma licencia. Las manchas de 'tomate_manchas_sinteticas.jpg' son artificiales.",
+  "licencia": "CC BY-SA 4.0",
+  "imagenes": [
+    {
+      "archivo": "tomate_bandeja.jpg",
+      "producto": "tomate",
+      "grupo_fruits360": "Tomato 3",
+      "archivo_original": "0_100.jpg",
+      "cambios": "Fruta colocada sobre fondo de bandeja.",
+      "proposito": "Tomate sin manchas visibles."
+    },
+    {
+      "archivo": "tomate_manchas_sinteticas.jpg",
+      "producto": "tomate",
+      "grupo_fruits360": "Tomato 3",
+      "archivo_original": "0_100.jpg",
+      "cambios": "Fondo de bandeja + 2 manchas oscuras SINTÉTICAS pintadas por ml/augment.py.",
+      "proposito": "Probar el detector de manchas (las manchas no son defectos reales)."
+    },
+    {
+      "archivo": "tomate_desenfocado.jpg",
+      "producto": "tomate",
+      "grupo_fruits360": "Tomato 3",
+      "archivo_original": "0_100.jpg",
+      "cambios": "Fondo de bandeja + desenfoque gaussiano (σ = 3).",
+      "proposito": "Probar la validación de calidad (debe pedir otra foto)."
+    },
+    {
+      "archivo": "banano_bandeja.jpg",
+      "producto": "banano",
+      "grupo_fruits360": "Banana 3",
+      "archivo_original": "r0_103_100.jpg",
+      "cambios": "Fruta colocada sobre fondo de bandeja.",
+      "proposito": "Banano de prueba."
+    },
+    {
+      "archivo": "papa_bandeja.jpg",
+      "producto": "papa",
+      "grupo_fruits360": "Potato Red 2",
+      "archivo_original": "30_100.jpg",
+      "cambios": "Fruta colocada sobre fondo de bandeja.",
+      "proposito": "Papa roja de prueba (clase con baja sensibilidad del modelo)."
+    }
+  ]
+}

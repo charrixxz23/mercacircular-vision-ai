@@ -1,0 +1,523 @@
+{
+  "clasificador": {
+    "version": "mc-lr-1.0",
+    "fecha_entrenamiento": "2026-11-07T02:23:48+00:00",
+    "entorno": {
+      "python": "3.13.18",
+      "scikit_learn": "1.9.1",
+      "opencv": "4.14.0"
+    },
+    "dataset": {
+      "nombre": "Fruits-360 (rama 100x100)",
+      "autor": "Mihai Oltean",
+      "url": "https://github.com/fruits-360/fruits-360-100x100",
+      "licencia": "CC BY-SA 4.0"
+    },
+    "particion": "por grupos (grabación completa en un solo lado); ver ml/splits.json",
+    "muestras": {
+      "entrenamiento": 2888,
+      "prueba": 1200,
+      "fallos_segmentacion": 0,
+      "por_clase_prueba": {
+        "tomate": 300,
+        "banano": 300,
+        "papa": 300,
+        "otro": 300
+      },
+      "grupos_prueba": {
+        "tomate": [
+          "Tomato 3",
+          "Tomato 9",
+          "Tomato Maroon 2",
+          "Tomato Cherry Red 2"
+        ],
+        "banano": [
+          "Banana 3"
+        ],
+        "papa": [
+          "Potato Red 2"
+        ],
+        "otro": [
+          "Apple Red 1",
+          "Mango 1",
+          "Onion White 1",
+          "Orange 1",
+          "Peach 1",
+          "Plum 1"
+        ]
+      }
+    },
+    "seleccion_modelo": {
+      "metodo": "Leave-One-Group-Out sobre entrenamiento",
+      "metrica": "F1 macro",
+      "resultados": {
+        "0.01": 0.586,
+        "0.03": 0.5758,
+        "0.1": 0.554,
+        "0.3": 0.5358,
+        "1.0": 0.524,
+        "3.0": 0.5134
+      },
+      "C_elegido": 0.01
+    },
+    "prueba": {
+      "exactitud": 0.71,
+      "f1_macro": 0.6805,
+      "por_clase": {
+        "tomate": {
+          "precision": 0.6031,
+          "sensibilidad": 0.9067,
+          "f1": 0.7244,
+          "tasa_falsos_positivos": 0.1989,
+          "soporte": 300
+        },
+        "banano": {
+          "precision": 0.9767,
+          "sensibilidad": 0.9767,
+          "f1": 0.9767,
+          "tasa_falsos_positivos": 0.0078,
+          "soporte": 300
+        },
+        "papa": {
+          "precision": 0.703,
+          "sensibilidad": 0.2367,
+          "f1": 0.3541,
+          "tasa_falsos_positivos": 0.0333,
+          "soporte": 300
+        },
+        "otro": {
+          "precision": 0.6207,
+          "sensibilidad": 0.72,
+          "f1": 0.6667,
+          "tasa_falsos_positivos": 0.1467,
+          "soporte": 300
+        }
+      },
+      "matriz_confusion": {
+        "etiquetas": [
+          "tomate",
+          "banano",
+          "papa",
+          "otro"
+        ],
+        "filas_real_columnas_predicho": [
+          [
+            272,
+            6,
+            0,
+            22
+          ],
+          [
+            0,
+            293,
+            7,
+            0
+          ],
+          [
+            119,
+            0,
+            71,
+            110
+          ],
+          [
+            60,
+            1,
+            23,
+            216
+          ]
+        ]
+      },
+      "calibracion": {
+        "ece_10_bins": 0.0545,
+        "brier": 0.3929
+      },
+      "umbral_confianza": {
+        "umbral": 0.6,
+        "cobertura": 0.7633,
+        "exactitud_sobre_umbral": 0.8024
+      },
+      "por_grupo": {
+        "Apple Red 1": {
+          "clase": "otro",
+          "n": 50,
+          "exactitud": 0.6
+        },
+        "Banana 3": {
+          "clase": "banano",
+          "n": 300,
+          "exactitud": 0.9767
+        },
+        "Mango 1": {
+          "clase": "otro",
+          "n": 50,
+          "exactitud": 0.68
+        },
+        "Onion White 1": {
+          "clase": "otro",
+          "n": 50,
+          "exactitud": 0.52
+        },
+        "Orange 1": {
+          "clase": "otro",
+          "n": 50,
+          "exactitud": 1.0
+        },
+        "Peach 1": {
+          "clase": "otro",
+          "n": 50,
+          "exactitud": 0.54
+        },
+        "Plum 1": {
+          "clase": "otro",
+          "n": 50,
+          "exactitud": 0.98
+        },
+        "Potato Red 2": {
+          "clase": "papa",
+          "n": 300,
+          "exactitud": 0.2367
+        },
+        "Tomato 3": {
+          "clase": "tomate",
+          "n": 75,
+          "exactitud": 0.9867
+        },
+        "Tomato 9": {
+          "clase": "tomate",
+          "n": 75,
+          "exactitud": 0.88
+        },
+        "Tomato Cherry Red 2": {
+          "clase": "tomate",
+          "n": 75,
+          "exactitud": 0.9467
+        },
+        "Tomato Maroon 2": {
+          "clase": "tomate",
+          "n": 75,
+          "exactitud": 0.8133
+        }
+      }
+    },
+    "nitidez": {
+      "descripcion": "Varianza del Laplaciano normalizada, medida en imágenes de prueba nítidas y con desenfoque gaussiano.",
+      "umbral_error": 0.1,
+      "umbral_advertencia": 0.3,
+      "percentiles_5_50_95": {
+        "sigma_0": [
+          0.544,
+          3.004,
+          13.762
+        ],
+        "sigma_1.5": [
+          0.067,
+          0.164,
+          0.477
+        ],
+        "sigma_2.5": [
+          0.031,
+          0.055,
+          0.149
+        ]
+      },
+      "rechazadas_como_error": {
+        "sigma_0": 0.0,
+        "sigma_1.5": 0.2608,
+        "sigma_2.5": 0.8108
+      }
+    },
+    "duracion_s": 45.2
+  },
+  "anomalias": {
+    "tipo": "validación sintética (manchas pintadas sobre imágenes limpias de los grupos de prueba)",
+    "advertencia": "No mide el desempeño con defectos reales; requiere un conjunto etiquetado del mercado.",
+    "parametros_elegidos": {
+      "delta_l": 18.0,
+      "min_area_frac": 0.015,
+      "local_k_frac": 0.25,
+      "local_factor": 0.6
+    },
+    "ajuste_en_entrenamiento": [
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.2555
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.3555
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.3139
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.3445
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.4
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.4916
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.4389
+      },
+      {
+        "delta_l": 18.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.4445
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.3389
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.4278
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.4056
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.4222
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.4389
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.4861
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.4694
+      },
+      {
+        "delta_l": 22.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.4667
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.4055
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.4389
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.4528
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.4306
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.4861
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.4445
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.4861
+      },
+      {
+        "delta_l": 28.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.4472
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.3917
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.3667
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.4083
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.008,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.3667
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.0,
+        "youden_medio": 0.375
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.25,
+        "local_factor": 0.6,
+        "youden_medio": 0.3195
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.0,
+        "youden_medio": 0.3778
+      },
+      {
+        "delta_l": 34.0,
+        "min_area_frac": 0.015,
+        "local_k_frac": 0.5,
+        "local_factor": 0.6,
+        "youden_medio": 0.3194
+      }
+    ],
+    "prueba_por_producto": {
+      "tomate": {
+        "imagenes": 150,
+        "sensibilidad": 0.6333,
+        "falsos_positivos_imagenes_limpias": 0.16,
+        "precision_regiones": 0.9195,
+        "sensibilidad_por_severidad": {
+          "leve": {
+            "detectadas": 28,
+            "total": 56,
+            "tasa": 0.5
+          },
+          "marcada": {
+            "detectadas": 67,
+            "total": 94,
+            "tasa": 0.7128
+          }
+        }
+      },
+      "banano": {
+        "imagenes": 150,
+        "sensibilidad": 0.8467,
+        "falsos_positivos_imagenes_limpias": 0.5333,
+        "precision_regiones": 0.79,
+        "sensibilidad_por_severidad": {
+          "leve": {
+            "detectadas": 37,
+            "total": 52,
+            "tasa": 0.7115
+          },
+          "marcada": {
+            "detectadas": 90,
+            "total": 98,
+            "tasa": 0.9184
+          }
+        }
+      },
+      "papa": {
+        "imagenes": 150,
+        "sensibilidad": 0.82,
+        "falsos_positivos_imagenes_limpias": 0.04,
+        "precision_regiones": 0.9716,
+        "sensibilidad_por_severidad": {
+          "leve": {
+            "detectadas": 50,
+            "total": 71,
+            "tasa": 0.7042
+          },
+          "marcada": {
+            "detectadas": 73,
+            "total": 79,
+            "tasa": 0.9241
+          }
+        }
+      }
+    }
+  }
+}

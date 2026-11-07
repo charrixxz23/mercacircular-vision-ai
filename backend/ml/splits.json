@@ -1,0 +1,33 @@
+{
+  "_descripcion": "Partición por GRUPOS. Cada carpeta de Fruits-360 es una grabación de una pieza (o piezas) girando; sus imágenes son fotogramas casi idénticos. Para evitar fuga de información, una carpeta completa va a entrenamiento o a prueba, nunca a ambos. Las carpetas Training/ y Test/ originales de Fruits-360 se juntan dentro de cada grupo porque provienen de la misma grabación.",
+  "dataset": {
+    "nombre": "Fruits-360 (rama 100x100)",
+    "autor": "Mihai Oltean",
+    "url": "https://github.com/fruits-360/fruits-360-100x100",
+    "licencia": "CC BY-SA 4.0"
+  },
+  "clases": {
+    "tomate": {
+      "train": ["Tomato 1", "Tomato 2", "Tomato 4", "Tomato 5", "Tomato 7", "Tomato 8", "Tomato 10", "Tomato 11", "Tomato Heart 1", "Tomato Maroon 1", "Tomato Cherry Red 1"],
+      "test": ["Tomato 3", "Tomato 9", "Tomato Maroon 2", "Tomato Cherry Red 2"]
+    },
+    "banano": {
+      "train": ["Banana 1", "Banana 2", "Banana 4", "Banana Lady Finger 1"],
+      "test": ["Banana 3"]
+    },
+    "papa": {
+      "train": ["Potato Red 1", "Potato White 1"],
+      "test": ["Potato Red 2"]
+    },
+    "otro": {
+      "train": ["Apple Golden 1", "Apple Granny Smith 1", "Avocado 1", "Beetroot 1", "Cantaloupe 1", "Carrot 1", "Cucumber 1", "Eggplant 1", "Kiwi 1", "Lemon 1", "Onion Red 1", "Papaya 1", "Pear 1", "Pepper Green 1", "Pepper Red 1", "Pepper Yellow 1", "Pineapple 1", "Pomegranate 1", "Potato Sweet 1"],
+      "test": ["Apple Red 1", "Mango 1", "Onion White 1", "Orange 1", "Peach 1", "Plum 1"]
+    }
+  },
+  "notas": [
+    "'otro' agrupa frutas y vegetales que no son tomate, banano ni papa; sirve para que el modelo pueda responder 'no es ninguno de los tres'.",
+    "El camote (Potato Sweet) se etiqueta como 'otro' porque no es papa.",
+    "Banana Red se excluye: no es representativa del banano comercializado en Panamá.",
+    "Las variedades amarillas/anaranjadas de tomate cherry se excluyen por la misma razón."
+  ]
+}
